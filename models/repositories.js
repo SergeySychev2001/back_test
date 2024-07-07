@@ -8,6 +8,7 @@ const repositoriesModel = database.define("repositories", {
     "full_name": stringCol({allowNull: true}),
     "private": boolCol(),
     "owner": intCol({
+        allowNull: true,
         references: {
             model: 'owners',
             key: 'id'
